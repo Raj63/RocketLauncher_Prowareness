@@ -1,28 +1,6 @@
 *******************************************************************
 ######################### RocketLauncher ##########################
 *******************************************************************
-___________________________________________________________________
-	Folder Structure			|		Dependencies
-___________________________________________________________________
-[ ] : folder
- -	: file
-===================================================================
-
-[RocketLauncher]
-	- Sln
-	- Dockerfile
-	[Src]
-		- Console App			| SimpleInjector-4.0.11
-		- Common Lib			| SimpleInjector-4.0.11, Newtonsoft.Json-10.0.3
-		- Contract Lib
-		- Business Lib
-		- Inventory(DAL) Lib
-
-	[Test]
-		- Mstest Proj			| ExpectedObjects, Moq, Microsoft.NET.Test.sdk, 
-								| MSTest.TestAdapter, MSTest.TestFramework
-
-
 __________________________________________________________________	
 Build, Publish & Run: dotnet commands
 ==================================================================
@@ -42,6 +20,28 @@ Build & Run: Docker
 1. sudo docker build -t <app-name> .
 
 2. sudo docker run -a stdin -a stdout -i -t <app-name>
+
+
+___________________________________________________________________
+	Folder Structure			|		Dependencies
+___________________________________________________________________
+[ ] = folder
+ -	= file
+___________________________________________________________________
+
+[RocketLauncher]
+	- Sln
+	- Dockerfile
+	[Src]
+		- Console App			| SimpleInjector/Microsoft.Extension.DependencyInjection, Microsoft.Extensions.Logging
+		- Common Lib			| SimpleInjector/Microsoft.Extension.DependencyInjection, Newtonsoft.Json-10.0.3
+		- Contract Lib
+		- Business Lib
+		- Inventory(DAL) Lib
+
+	[Test]
+		- Mstest Proj			| ExpectedObjects, Moq, Microsoft.NET.Test.sdk, 
+								| MSTest.TestAdapter, MSTest.TestFramework
 
 
 ___________________________________________________________________
